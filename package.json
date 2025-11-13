@@ -1,0 +1,34 @@
+{
+  "name": "gta-lux",
+  "version": "1.0.0",
+  "description": "GTA 6 Gaming Web Application - Comprehensive content management platform",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "cd client && npm start",
+    "dev:server": "cd server && npm run dev",
+    "build": "cd client && npm run build && cd ../server && npm run build",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "start": "cd server && npm start",
+    "vercel-build": "cd client && npm install && npm run build"
+  },
+  "keywords": [
+    "gta6",
+    "gaming",
+    "content-management",
+    "react",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "GTA Lux Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
