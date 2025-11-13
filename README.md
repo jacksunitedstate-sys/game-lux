@@ -1,0 +1,2 @@
+# game-lux
+game blogs
